@@ -25,7 +25,7 @@ SECRET_KEY = 'guo%#_%syg*k0641(7t08dc0-4=as!0u2=!3j+gq#17td8p-3_'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8080-fefe6f19-076d-42fb-b95b-1df5e46115d4.ws-eu01.gitpod.io']
+ALLOWED_HOSTS = ['8080-fefe6f19-076d-42fb-b95b-1df5e46115d4.ws-eu01.gitpod.io', 'localhost']
 
 
 # Application definition
@@ -65,6 +65,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'django.template.context_processors.media', 
             ],
         },
     },
@@ -126,5 +127,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 STATIC_URL = '/static/'
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
 
 MESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'
