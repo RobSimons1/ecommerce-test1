@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.com/RobSimons1/e-commerce.svg?branch=master)](https://travis-ci.com/RobSimons1/e-commerce)
 # Code Institute
 
 Welcome RobSimons1,
