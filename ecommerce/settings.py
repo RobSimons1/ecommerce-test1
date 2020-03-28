@@ -32,7 +32,7 @@ ALLOWED_HOSTS = ['8080-fefe6f19-076d-42fb-b95b-1df5e46115d4.ws-eu01.gitpod.io', 
 # Application definition
 
 INSTALLED_APPS = [
-'django.contrib.admin',
+    'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
