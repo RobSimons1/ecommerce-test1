@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,600,700|Exo:100,200,300,400,500,600,700|Indie+Flower:100,200,300,400,500,600,700|Audiowide:100,200,300,400,500,600,700|Righteous:100,200,300,400,500,600,700|Kanit:100,200,300,400,500,600,700');
+
 body {
     font-family: Arial;
     padding-top: 100px;
@@ -63,4 +65,57 @@ caption p {
 
 .product-description {
     min-height: 40px;
+}
+
+/*-----------------------------------Footer*/
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;   
+  margin-top: auto;
+}
+
+.copyright {
+    color: #1B1919;
+    text-shadow: 1px 1px #E2AA72;
+    margin-top: 20px;
+    text-align: center;
+    display: block;
+    font-weight: bolder;
+    opacity: 0.8;
+}
+
+.footer-logo {
+    text-align: center;
+    display: block;
+    opacity: 0.3;
+}
+
+.social-links {
+    text-align: center;
+    padding-bottom: 0px;
+    margin-bottom: 0px ! important;
+}
+
+.social-links li a i {    
+    margin-top: 15px ! important;
+    margin-bottom: 10px ! important;
+    text-shadow: 1px 1px #c67605;
+    width: 50px;
+    height: 0px;
+    padding: 0px 0px 0px 0px ! important;    
+    font-size: 30px; /* Controls size of fontawesome icon was 40px */
+    line-height: 25px;    
+    color: #1B1919;   
+    opacity: 0.9;
+    transition: all 0.35s ease-in-out;
+    -moz-transition: all 0.35s ease-in-out;
+    -webkit-transition: all 0.35s ease-in-out;
+    -o-transition: all 0.35s ease-in-out;
+}
+
+.social-links li a i:hover{
+    background: #F5F5F5;
+    
 }
