@@ -1,16 +1,107 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,600,700|Exo:100,200,300,400,500,600,700|Indie+Flower:100,200,300,400,500,600,700|Audiowide:100,200,300,400,500,600,700|Righteous:100,200,300,400,500,600,700|Kanit:100,200,300,400,500,600,700');
 
+/*------------------------------------Navbar*/
+.logo {
+    width: 200px;
+    max-height: 100px;   
+}
+
+.navbar {
+    border-color: #fff;
+    background-color: #fff;
+    background-image: unset; /*Over-rides Bootstrap default*/
+}
+
+#navbar {
+    border-color: #fff;
+    background-color: #fff;
+    background-image: unset; /*Over-rides Bootstrap default*/
+}
+
+.navbar-toggle {
+    border-color: black;
+    background-color: black;
+}
+
+.navbar-default .navbar-toggle {
+    border-color: #555555;
+    background-color: #555555 !important; /*Over-rides Bootstrap default*/
+}    
+
+.navbar .navbar-toggle:hover {    
+    border-color: #fff;
+    background-color: #c67605 !important; /*Over-rides Bootstrap default*/
+}
+
+/*Over-rides Bootstrap Navbar Hover colour*/
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+    border-color: #F5F5F5;
+    background-color: #F5F5F5 !important; /*Over-rides Bootstrap default*/
+}
+
+/* Used with jquery script to highlight active page in navbar */
+#navbar .active {
+    color:            #F5F5F5;
+    background-color: #F5F5F5 !important; /*Over-rides Bootstrap default*/
+}
+
+.navbar-nav {
+   background-color: #fff; 
+}
+
+.navbar-header {
+    background-color: #fff; 
+}
+
+nav {
+    transition: background 0.4s ease-in-out; /* Used for navbar hide on scroll */
+    background: #010101;
+}
+.is-hidden { /* Used for navbar hide on scroll */
+    opacity: 0;
+    transition: transform 0.4s, opacity 0.2s;
+}
+
+.menuitem {
+    height: auto;
+    text-align: center;
+    font-family: 'Kanit', sans-serif;
+    padding: 0;
+    font-weight: bolder;
+    color: #4B494A;
+}
+
+.menuitem a {
+    width: 100%;
+    text-decoration: none;
+    color: #4B494A;
+    height: auto;
+}
+
+.menuitem a i {
+    padding-top: 22px;
+    display: inline;
+    color: #4B494A;
+    text-shadow: 1px 1px #E2AA72;
+    font-size: 20px; /* Controls size of fontawesome icon was 26px */
+}
+
+.menuitem span {
+    display: block;
+    width: 100%;
+    padding-top: 5px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    color: #4B494A;
+    text-shadow: 1px 1px #E2AA72;
+} 
+
 body {
     font-family: Arial;
     padding-top: 100px;
-}
-
-footer {
-    margin-top: 40px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    border-top: 1px solid #ededed;
-    color: #A9A9A9;
 }
 
 .icon-bar {
@@ -74,6 +165,7 @@ caption p {
   bottom: 0;
   width: 100%;   
   margin-top: auto;
+  background-color: #FFFFFF;
 }
 
 .copyright {
@@ -89,7 +181,6 @@ caption p {
 .footer-logo {
     text-align: center;
     display: block;
-    opacity: 0.3;
 }
 
 .social-links {
