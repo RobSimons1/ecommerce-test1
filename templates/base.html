@@ -1,6 +1,6 @@
-{% load staticfiles %}
 <!DOCTYPE html>
 <html lang="en">
+{% load staticfiles %}
 
 <head>
 	<meta charset="UTF-8">
@@ -8,7 +8,7 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Oakland Site Investigation</title>
 	<!-- favicon link to favicon-32x32.png displayed in browser tab -->
-	<link rel="icon" type="image/png" href="media/images/favicon-32x32.png" sizes="32x32" />
+	<link rel="icon" type="image/png" href="/media/images/favicon-32x32.png" sizes="32x32" />
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.7/cerulean/bootstrap.min.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
 		type="text/css" />
@@ -85,14 +85,21 @@
 	</div>
 	{% endif %}
 	<div class="container">
-		<div class="display">
-			<form action="{% url 'search' %}" method="get">
-				<input type="text" name="q">
-				<button type="submit">Search</button>
-			</form>
+		<div class="statement hidden-xs">
+			<p>A Hove based small batch nano-brewery adopting a Death-or-Glory approach since 2014</p>
+		</div>
+		<div id="search-bar">
+			<div class="display">
+				<form action="{% url 'search' %}" method="get">
+					<div class="search-input"> <input type="text" name="q"><span>
+					<button type="submit">Search</button></span>
+					</div>
+				</form>
+			</div>
 		</div>
 		{% block content %} {% endblock %}
 	</div>
+
 	<div class="footer">
 		<div class="container">
 			<div class="col row-flex">
@@ -110,7 +117,7 @@
 				</div>
 				<div class="col-sm-4 hidden-xs">
 					<a class="footer-logo" rel="home" href="/" title="Oakland SI">
-						<img class="bottom-logo" src="media/images/oakland_logo_1.jpg" alt="Oakland SI">
+						<img class="bottom-logo" src="/media/images/oakland_logo_1.jpg" alt="Oakland SI">
                         </a>
 				</div>
 				<div class="copyright col-sm-4 hidden-xs">
@@ -121,6 +128,45 @@
 		</div>
 	</div>
 	</footer>
+
+	<!-- Script to highlight active page in navbar to help user navigation. used with CSS #navbar .active {} -->
+	<script>
+		$(function(){
+        $('a').each(function(){
+            if ($(this).prop('href') == window.location.href) {
+                $(this).addClass('active'); $(this).parents('li').addClass('active');
+            }
+        });
+    });
+
+    
+/* When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar */
+ $(document).ready(function () {
+	var previousScroll = 0;
+	$(window).scroll(function () {
+		var currentScroll = $(this).scrollTop();
+		if (currentScroll < 100) {
+			
+		} else if (currentScroll > 0 && currentScroll < $(document).height() - $(window).height()) {
+			if (currentScroll > previousScroll) {
+				hideNav();
+			} else {
+				showNav();
+			}
+			previousScroll = currentScroll;
+		}
+	});
+
+	function hideNav() {
+		$(".navbar").removeClass("is-visible").addClass("is-hidden");
+	}
+
+	function showNav() {
+		$(".navbar").removeClass("is-hidden").addClass("is-visible").addClass("scrolling");
+	}
+});
+    
+	</script>
 </body>
 
 </html>
