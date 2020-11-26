@@ -99,9 +99,12 @@ nav {
     text-shadow: 1px 1px #E2AA72;
 } 
 
+/*------------------------------------Body*/
+
 body {
     font-family: Arial;
     padding-top: 100px;
+    padding-bottom: 100px;
 }
 
 .statement {
@@ -122,10 +125,6 @@ body {
     padding: 5px 0px 0px 10px;
 }
 
-.messages {    
-    background-color: pink;
-}
-
 /* Input for search bar */
 .search-input {  
     margin: 0px 10px 10px 20px
@@ -133,6 +132,10 @@ body {
 
 .icon-bar {
     background-color: #fff;
+}
+
+.quantity-field {
+    width: 200px;
 }
 
 .accountform {
@@ -158,7 +161,7 @@ body {
     background-repeat: no-repeat;
     width: 150px;
     height: 150px;
-    margin: 0 auto;
+    margin: 10px;
 }
 
 caption p {
@@ -171,6 +174,15 @@ caption p {
     margin-top: 30px;
 }
 
+.product-info {
+    float: right;    
+}
+
+.product-info-phone {
+    padding-left: 0px;
+    padding-right: 0px;    
+}
+
 .panel-default {
     border-color: transparent;
     padding: 0 10px;
@@ -181,8 +193,22 @@ caption p {
     border: 1px solid #ddd;
 }
 
+.panel-two {
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.logo-info {
+    padding-left: 170px;
+}
+
 .product-description {
     min-height: 40px;
+}
+
+.no-items {
+    margin-left: 15px;
+    margin-right: 15px;
 }
 
 /*-----------------------------------Footer*/
@@ -202,7 +228,6 @@ caption p {
     text-align: center;
     display: block;
     font-weight: bolder;
-    opacity: 0.8;
 }
 
 .footer-logo {
@@ -226,7 +251,6 @@ caption p {
     font-size: 30px; /* Controls size of fontawesome icon was 40px */
     line-height: 25px;    
     color: #1B1919;   
-    opacity: 0.9;
     transition: all 0.35s ease-in-out;
     -moz-transition: all 0.35s ease-in-out;
     -webkit-transition: all 0.35s ease-in-out;
@@ -237,3 +261,15 @@ caption p {
     background: #F5F5F5;
     
 }
+
+/*------------------------------------Media queries*/
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+/*Media query added, as no Bootstrap measurement for Ipad resolution*/
+.panel-two-phone {
+    display: none;
+}
+
+}
+
