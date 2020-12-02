@@ -22,9 +22,11 @@ from checkout import urls as urls_checkout
 from products.views import all_products
 from django.views import static
 from .settings import MEDIA_ROOT
+from ecommerce import settings
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'^admin_platform/', include('admin_platform.urls')),
     url(r'^$', all_products, name='index'),
     url(r'^accounts/', include(urls_accounts)),
     url(r'^products/', include(urls_products)),
@@ -33,3 +35,5 @@ urlpatterns = [
     url(r'^search/', include(urls_search)),
     url(r'^media/(?P<path>.*)$', static.serve, {'document_root': MEDIA_ROOT})
 ]
+
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)#this will help to access your media folder.
