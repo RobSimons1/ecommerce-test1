@@ -46,11 +46,11 @@
 }
 
 .navbar-nav {
-   background-color: #fff; 
+   background-color: #fff !important; /*Over-rides Bootstrap default*/
 }
 
 .navbar-header {
-    background-color: #fff; 
+    background-color: #fff !important; /*Over-rides Bootstrap default*/ 
 }
 
 nav {
