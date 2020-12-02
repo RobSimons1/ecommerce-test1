@@ -3,7 +3,7 @@ __pycache__
 env.py
 *.png
 static/
-media/
+
 
 __pycache__/
 *.py[cod]
