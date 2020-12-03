@@ -16,8 +16,10 @@
 		type="text/css" />
 	<!-- Link to make navbar hover work -->
 	<link rel="stylesheet" href="{% static 'css/custom.css' %}">
+    
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="{% static 'js/main.js' %}"></script>
 	{% block head_js %}
 	{% endblock head_js %}
 </head>
@@ -93,7 +95,7 @@
 		<div id="search-bar">
 			<div class="display">
 				<form action="{% url 'search' %}" method="get">
-					<div class="search-input"> <input type="text" name="q"><span>
+					<div class="search-input"> <input type="text" name="q" placeholder="Search our services" required><span>
 					<button type="submit">Search</button></span>
 					</div>
 				</form>
@@ -130,45 +132,6 @@
 		</div>
 	</div>
 	</footer>
-
-	<!-- Script to highlight active page in navbar to help user navigation. used with CSS #navbar .active {} -->
-	<script>
-		$(function(){
-        $('a').each(function(){
-            if ($(this).prop('href') == window.location.href) {
-                $(this).addClass('active'); $(this).parents('li').addClass('active');
-            }
-        });
-    });
-
-    
-/* When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar */
- $(document).ready(function () {
-	var previousScroll = 0;
-	$(window).scroll(function () {
-		var currentScroll = $(this).scrollTop();
-		if (currentScroll < 100) {
-			
-		} else if (currentScroll > 0 && currentScroll < $(document).height() - $(window).height()) {
-			if (currentScroll > previousScroll) {
-				hideNav();
-			} else {
-				showNav();
-			}
-			previousScroll = currentScroll;
-		}
-	});
-
-	function hideNav() {
-		$(".navbar").removeClass("is-visible").addClass("is-hidden");
-	}
-
-	function showNav() {
-		$(".navbar").removeClass("is-hidden").addClass("is-visible").addClass("scrolling");
-	}
-});
-    
-	</script>
 
 </body>
 
