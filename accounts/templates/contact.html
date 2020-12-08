@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% load bootstrap_tags %}
+{% block content %}
+
+<form method="POST" action="{% url 'contact' %}" class="accountform">
+	<fieldset class="form-group">
+		<legend>Contact Us</legend>
+		<p>Hi {{ user.username }}, Please feel free to message us</p>
+		{% csrf_token %}
+		{{  user_form | as_bootstrap }}
+
+		<button id="myBtn" type="submit" class="btn btn-success">Send Message</button>
+
+	</fieldset>
+
+</form>
+{% endblock %}

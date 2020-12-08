@@ -53,6 +53,11 @@
 								<i class="fa fa-industry"></i><span>Products</span></a>
 						</li>
 						{% if user.is_authenticated %}
+                        <li class="menuitem">
+							<a href="{% url 'contact' %}" class="hvr-pulse">
+								<!-- Above CSS class used to make hvr-pulse work -->
+								<i class="fa fa-envelope"></i><span>Contact</span></a>
+						</li>
 						<li class="menuitem">
 							<a href="{% url 'profile' %}" class="hvr-pulse">
 								<i class="fa fa-user"></i><span>Profile</span></a>
