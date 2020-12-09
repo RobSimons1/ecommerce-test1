@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% load bootstrap_tags %}
+
+{% block content %}
+<div class="container">
+
+
+	<h2>Hi {{ user.username }}</h2>
+	<p>You are logged in as {{ user.email }} </p>
+    <p>Here you are able to notify us of your name and address details for use in future purchases of our Delicious Ales</p>
+
+	<form role="form" method="post" id="profile-form" action="{% url 'profile' %}">
+		<legend>{{ user.username }} Profile Details</legend>
+
+		<div class="form-group col-md-6">
+			{{ form | as_bootstrap }}
+		</div>
+
+		{% csrf_token %}
+		<div class="form-group col-md-12">
+			<input class=" btn btn-primary" id="submit_profile_btn" name="commit" type="submit" value="Update Profile">
+    </div>
+	</form>
+
+
+</div>
+
+{% endblock %}
