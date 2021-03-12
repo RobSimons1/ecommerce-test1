@@ -140,18 +140,18 @@ img.cover-pic {
 }
 
 .card {
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  transition: 0.3s;
-  border-radius: 5px; /* 5px rounded corners */
-}
-
-#map {
-    min-height: 360px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    border-radius: 5px; /* 5px rounded corners */
+    margin: 5px 0 5px 0;
 }
 
 /* Add rounded corners to the top left and the top right corner of the image */
-img {
-  border-radius: 5px 5px 0 0;
+img.map {
+    border-radius: 5px 5px 0 0;
+    max-height: 100%;
+    max-width: 100%; 
+    margin-top: 20px;
 }
 
 .quantity-field {
