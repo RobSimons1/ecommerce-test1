@@ -145,6 +145,10 @@ img.cover-pic {
   border-radius: 5px; /* 5px rounded corners */
 }
 
+#map {
+    min-height: 360px;
+}
+
 /* Add rounded corners to the top left and the top right corner of the image */
 img {
   border-radius: 5px 5px 0 0;
