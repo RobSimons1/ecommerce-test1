@@ -52,11 +52,6 @@
 								<!-- Above CSS class used to make hvr-pulse work -->
 								<i class="fa fa-industry"></i><span>Products</span></a>
                         </li>
-                        <li class="menuitem">
-							<a href="{% url 'downloads' %}" class="hvr-pulse">
-								<!-- Above CSS class used to make hvr-pulse work -->
-								<i class="fa fa-download"></i><span>Downloads</span></a>
-						</li>
 						{% if user.is_authenticated %}
                         <li class="menuitem">
 							<a href="{% url 'contact' %}" class="hvr-pulse">
