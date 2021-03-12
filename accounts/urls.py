@@ -1,6 +1,6 @@
 from django.conf.urls import url, include
 from . import urls_reset
-from .views import index, register, profile, logout, login, contact
+from .views import index, register, profile, logout, login, contact, downloads,
 
 urlpatterns = [
     url(r'^contact/$', contact, name='contact'),
