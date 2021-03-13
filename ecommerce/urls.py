@@ -17,6 +17,7 @@ from django.contrib import admin
 from accounts.views import index
 from accounts import urls as urls_accounts
 from products import urls as urls_products
+from accounts import urls as urls_downloads
 from cart import urls as urls_cart
 from search import urls as urls_search
 from checkout import urls as urls_checkout
@@ -31,6 +32,7 @@ urlpatterns = [
     # url(r'^$', all_products, name='index'),
     url(r'^accounts/', include(urls_accounts)),
     url(r'^products/', include(urls_products)),
+    url(r'^downloads/', include(urls_downloads)),
     url(r'^cart/', include(urls_cart)),
     url(r'^checkout/', include(urls_checkout)),
     url(r'^profiles/', include(urls_profile)),  # profiles urls import
