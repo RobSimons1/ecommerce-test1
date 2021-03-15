@@ -144,6 +144,7 @@ img.cover-pic {
     transition: 0.3s;
     border-radius: 5px; /* 5px rounded corners */
     margin: 5px 0 5px 0;
+    padding: 15px;
 }
 
 /* Add rounded corners to the top left and the top right corner of the image */
