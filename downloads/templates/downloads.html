@@ -3,6 +3,67 @@
 
 {% block content %}
 
-<h2> MY BUTTOCKS ARE BRIGHT </h2>
+<h2>Downloads & Documents</h2>
+<div>
+<button class="toggle">Generic RAMS</button>
+<div id="link-box">
+    <ul>
+        <li><a href="/media/assets/coring_frame_rams.pdf" target="_blank">Coring Frame RAMS</a></li>
+        <li><a href="#">Link 2</a></li>
+        <li><a href="#">Link 3</a></li>
+        <li><a href="#">Link 4</a></li>
+    </ul>
+</div>
+</div>
 
-{% endblock %}
+<div>
+<button class="toggle">Open box at side</button>
+<div id="link-box">
+    <ul>
+        <li><a href="#">Link 1</a></li>
+        <li><a href="#">Link 2</a></li>
+        <li><a href="#">Link 3</a></li>
+        <li><a href="#">Link 4</a></li>
+    </ul>
+</div>
+</div>
+
+<div>
+<button class="toggle">Open box at side</button>
+<div id="link-box">
+    <ul>
+        <li><a href="#">Link 1</a></li>
+        <li><a href="#">Link 2</a></li>
+        <li><a href="#">Link 3</a></li>
+        <li><a href="#">Link 4</a></li>
+    </ul>
+</div>
+</div>
+
+<script>
+// Script to show box list in downloads page //
+$('.toggle').click(function() {
+  $('#link-box').toggle('slow');
+});
+</script>
+    <!-- <div><button class="toggle">Generic RAMS</button>
+    <div id="link-box">
+        <ul>
+            <li><a href="/media/assets/coring_frame_rams.pdf" target="_blank">Coring Frame RAMS</a></li>
+            <li><a href="#">Link 2</a></li>
+            <li><a href="#">Link 3</a></li>
+            <li><a href="#">Link 4</a></li>
+        </ul>
+    </div>
+
+    <div><button class="toggle">Button</button>
+        <div id="link-box">
+            <ul>
+                <li><a href="#">Link 1</a></li>
+                <li><a href="#">Link 2</a></li>
+                <li><a href="#">Link 3</a></li>
+                <li><a href="#">Link 4</a></li>
+            </ul>
+        </div> -->
+
+    {% endblock %}
