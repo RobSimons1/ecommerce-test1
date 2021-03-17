@@ -159,9 +159,8 @@ img.map {
 
 #link-box-rams {
   background: #E2AA72;
-  width: 300px;
-  height: 300px;
-  height: 160px;
+  width: 300px;  
+  height: 425px;
   padding: 5px;
   display: none;
   float: right;
@@ -169,9 +168,8 @@ img.map {
 
 #link-box-factsheets {
   background: #Efffff;
-  width: 300px;
-  height: 300px;
-  height: 160px;
+  width: 300px;  
+  height: 210px;
   padding: 5px;
   display: none;
   float: right;
@@ -179,9 +177,8 @@ img.map {
 
 #link-box-spts {
   background: #E2AA72;
-  width: 300px;
-  height: 300px;
-  height: 160px;
+  width: 300px;  
+  height: 450px;
   padding: 5px;
   display: none;
   float: right;
@@ -189,8 +186,7 @@ img.map {
 
 #link-box-insurances {
   background: #Efffff;
-  width: 300px;
-  height: 300px;
+  width: 300px;  
   height: 160px;
   padding: 5px;
   display: none;
