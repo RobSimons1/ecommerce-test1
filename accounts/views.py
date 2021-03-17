@@ -1,4 +1,5 @@
-from django.shortcuts import render, redirect, HttpResponseRedirect
+from django.shortcuts import render, redirect, HttpResponseRedirect, render_to_response
+from django.template import RequestContext
 from django.contrib import messages, auth
 from django.core.urlresolvers import reverse
 from .forms import UserLoginForm, UserRegistrationForm, ContactForm
@@ -112,3 +113,16 @@ def register(request):
 
     args = {'user_form': user_form}
     return render(request, 'register.html', args)
+
+def handler404(request, *args, **argv):
+    response = render_to_response('404.html', {},
+                                  context_instance=RequestContext(request))
+    response.status_code = 404
+    return response
+
+
+def handler500(request, *args, **argv):
+    response = render_to_response('500.html', {},
+                                  context_instance=RequestContext(request))
+    response.status_code = 500
+    return response
