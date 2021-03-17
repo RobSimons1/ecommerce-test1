@@ -5,48 +5,72 @@
 
 <h2>Downloads & Documents</h2>
 <div>
-<button class="toggle">Generic RAMS</button>
-<div id="link-box">
-    <ul>
-        <li><a href="/media/assets/coring_frame_rams.pdf" target="_blank">Coring Frame RAMS</a></li>
-        <li><a href="#">Link 2</a></li>
-        <li><a href="#">Link 3</a></li>
-        <li><a href="#">Link 4</a></li>
-    </ul>
-</div>
-</div>
-
-<div>
-<button class="toggle">Open box at side</button>
-<div id="link-box">
-    <ul>
-        <li><a href="#">Link 1</a></li>
-        <li><a href="#">Link 2</a></li>
-        <li><a href="#">Link 3</a></li>
-        <li><a href="#">Link 4</a></li>
-    </ul>
-</div>
+    <button id="toggle-rams">Generic RAMS</button>
+    <div id="link-box-rams">
+        <ul>
+            <li><a href="/media/assets/coring_frame_rams.pdf" target="_blank">Coring Frame RAMS</a></li>
+            <li><a href="#">Link 2</a></li>
+            <li><a href="#">Link 3</a></li>
+            <li><a href="#">Link 4</a></li>
+        </ul>
+    </div>
 </div>
 
 <div>
-<button class="toggle">Open box at side</button>
-<div id="link-box">
-    <ul>
-        <li><a href="#">Link 1</a></li>
-        <li><a href="#">Link 2</a></li>
-        <li><a href="#">Link 3</a></li>
-        <li><a href="#">Link 4</a></li>
-    </ul>
+    <button id="toggle-factsheets">Factsheets</button>
+    <div id="link-box-factsheets">
+        <ul>
+            <li><a href="#">Link 1</a></li>
+            <li><a href="#">Link 2</a></li>
+            <li><a href="#">Link 3</a></li>
+            <li><a href="#">Link 4</a></li>
+        </ul>
+    </div>
 </div>
+
+<div>
+    <button id="toggle-spts">SPT Calibrations</button>
+    <div id="link-box-spts">
+        <ul>
+            <li><a href="#">Link 1</a></li>
+            <li><a href="#">Link 2</a></li>
+            <li><a href="#">Link 3</a></li>
+            <li><a href="#">Link 4</a></li>
+        </ul>
+    </div>
+</div>
+
+<div>
+    <button id="toggle-insurances">Insurances</button>
+    <div id="link-box-insurances">
+        <ul>
+            <li><a href="#">Link 1</a></li>
+            <li><a href="#">Link 2</a></li>
+            <li><a href="#">Link 3</a></li>
+            <li><a href="#">Link 4</a></li>
+        </ul>
+    </div>
 </div>
 
 <script>
-// Script to show box list in downloads page //
-$('.toggle').click(function() {
-  $('#link-box').toggle('slow');
-});
+    // Script to show box list in downloads page //
+    $('#toggle-rams').click(function () {
+        $('#link-box-rams').toggle('slow');
+    });
+
+    $('#toggle-factsheets').click(function () {
+        $('#link-box-factsheets').toggle('slow');
+    });
+
+    $('#toggle-spts').click(function () {
+        $('#link-box-spts').toggle('slow');
+    });
+
+    $('#toggle-insurances').click(function () {
+        $('#link-box-insurances').toggle('slow');
+    });
 </script>
-    <!-- <div><button class="toggle">Generic RAMS</button>
+<!-- <div><button class="toggle">Generic RAMS</button>
     <div id="link-box">
         <ul>
             <li><a href="/media/assets/coring_frame_rams.pdf" target="_blank">Coring Frame RAMS</a></li>
@@ -66,4 +90,4 @@ $('.toggle').click(function() {
             </ul>
         </div> -->
 
-    {% endblock %}
+{% endblock %}

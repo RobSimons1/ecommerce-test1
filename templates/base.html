@@ -3,150 +3,151 @@
 {% load staticfiles %}
 
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Oakland Site Investigation</title>
-	<!-- favicon link to favicon-32x32.png displayed in browser tab -->
-	<link rel="icon" type="image/png" href="/media/images/favicon-32x32.png" sizes="32x32" />
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.7/cerulean/bootstrap.min.css">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-		type="text/css" />
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css"
-		type="text/css" />
-	<!-- Link to make navbar hover work -->
-	<link rel="stylesheet" href="{% static 'css/custom.css' %}">
-    
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Oakland Site Investigation</title>
+    <!-- favicon link to favicon-32x32.png displayed in browser tab -->
+    <link rel="icon" type="image/png" href="/media/images/favicon-32x32.png" sizes="32x32" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.7/cerulean/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css"
+        type="text/css" />
+    <!-- Link to make navbar hover work -->
+    <link rel="stylesheet" href="{% static 'css/custom.css' %}">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="{% static 'js/main.js' %}"></script>
-   	{% block head_js %}
-	{% endblock head_js %}
+    {% block head_js %}
+    {% endblock head_js %}
 </head>
 
 <body>
-	<!-- Fixed masthead -->
-	<nav class="navbar navbar-masthead navbar-default navbar-fixed-top">
-		<div class="container">
-			<div class="row">
-				<div class="navbar-header">
-					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-					<a class="navbar-left" rel="home" href="/" title="Oakland SI">
-						<img class="logo" src="/media/images/oakland_logo.jpg" alt="Oakland SI">
-                </a>
-				</div>
-				<div id="navbar" class="navbar-collapse collapse">
-					<ul class="nav navbar-nav navbar-right">
-						<li class="menuitem">
-							<a href="{% url 'index' %}" class="hvr-pulse">
-								<!-- Above CSS class used to make hvr-pulse work -->
-								<i class="fa fa-home"></i><span>Home</span></a>
-						</li>
+    <!-- Fixed masthead -->
+    <nav class="navbar navbar-masthead navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="row">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                        aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-left" rel="home" href="/" title="Oakland SI">
+                        <img class="logo" src="/media/images/oakland_logo.jpg" alt="Oakland SI">
+                    </a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
                         <li class="menuitem">
-							<a href="{% url 'products' %}" class="hvr-pulse">
-								<!-- Above CSS class used to make hvr-pulse work -->
-								<i class="fa fa-industry"></i><span>Products</span></a>
+                            <a href="{% url 'index' %}" class="hvr-pulse">
+                                <!-- Above CSS class used to make hvr-pulse work -->
+                                <i class="fa fa-home"></i><span>Home</span></a>
                         </li>
                         <li class="menuitem">
-							<a href="{% url 'downloads' %}" class="hvr-pulse">
-								<!-- Above CSS class used to make hvr-pulse work -->
-								<i class="fa fa-download"></i><span>Downloads</span></a>
-						</li>
-						{% if user.is_authenticated %}
+                            <a href="{% url 'products' %}" class="hvr-pulse">
+                                <!-- Above CSS class used to make hvr-pulse work -->
+                                <i class="fa fa-industry"></i><span>Products</span></a>
+                        </li>
                         <li class="menuitem">
-							<a href="{% url 'contact' %}" class="hvr-pulse">
-								<!-- Above CSS class used to make hvr-pulse work -->
-								<i class="fa fa-envelope"></i><span>Contact</span></a>
-						</li>
-						<li class="menuitem">
-							<a href="{% url 'profile' %}" class="hvr-pulse">
-								<i class="fa fa-user"></i><span>Profile</span></a>
-						</li>
-						<li class="menuitem">
-							<a href="{% url 'logout' %}" class="hvr-pulse">
-								<i class="fa fa-sign-out"></i><span>Log Out</span></a>
-						</li>
-						{%  else %}
-						<li class="menuitem">
-							<a href="{% url 'register' %}" class="hvr-pulse">
-								<i class="fa fa-id-badge"></i><span>Register</span></a>
-						</li>
-						<li class="menuitem">
-							<a href="{% url 'login' %}" class="hvr-pulse">
-								<i class="fa fa-sign-in"></i><span>Log In</span></a>
-						</li>
-						{% endif %}
-						<li class="menuitem">
-							<a href="{% url 'view_cart' %}" class="hvr-pulse">
-								<i class="fa fa-shopping-cart"></i><span>Cart
-                            {% if product_count > 0 %}
-                            <small class="badge badge-warning">{{ product_count }}</small></span>
-								{% endif %}
-							</a>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</div>
-	</nav>
-	{% if messages %}
-	<div class="alert alert-success">
-		<div class="messages">
-			{% for message in messages %}
-			{{ message }}
-			{% endfor %}
-		</div>
-	</div>
-	{% endif %}
-	<div class="container">
-		<div class="statement hidden-xs">
-			<p>See what services we can offer you and build your own quotation</p>
-		</div>
-		<div id="search-bar">
-			<div class="display">
-				<form action="{% url 'search' %}" method="get">
-					<div class="search-input"> <input type="text" name="q" placeholder="Search our services"><span>
-					<button type="submit">Search</button></span>
-					</div>
-				</form>
-			</div>
-		</div>
-		{% block content %} {% endblock %}
-	</div>
+                            <a href="{% url 'downloads' %}" class="hvr-pulse">
+                                <!-- Above CSS class used to make hvr-pulse work -->
+                                <i class="fa fa-download"></i><span>Downloads</span></a>
+                        </li>
+                        {% if user.is_authenticated %}
+                        <li class="menuitem">
+                            <a href="{% url 'contact' %}" class="hvr-pulse">
+                                <!-- Above CSS class used to make hvr-pulse work -->
+                                <i class="fa fa-envelope"></i><span>Contact</span></a>
+                        </li>
+                        <li class="menuitem">
+                            <a href="{% url 'profile' %}" class="hvr-pulse">
+                                <i class="fa fa-user"></i><span>Profile</span></a>
+                        </li>
+                        <li class="menuitem">
+                            <a href="{% url 'logout' %}" class="hvr-pulse">
+                                <i class="fa fa-sign-out"></i><span>Log Out</span></a>
+                        </li>
+                        {%  else %}
+                        <li class="menuitem">
+                            <a href="{% url 'register' %}" class="hvr-pulse">
+                                <i class="fa fa-id-badge"></i><span>Register</span></a>
+                        </li>
+                        <li class="menuitem">
+                            <a href="{% url 'login' %}" class="hvr-pulse">
+                                <i class="fa fa-sign-in"></i><span>Log In</span></a>
+                        </li>
+                        {% endif %}
+                        <li class="menuitem">
+                            <a href="{% url 'view_cart' %}" class="hvr-pulse">
+                                <i class="fa fa-shopping-cart"></i><span>Cart
+                                    {% if product_count > 0 %}
+                                    <small class="badge badge-warning">{{ product_count }}</small></span>
+                                {% endif %}
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    {% if messages %}
+    <div class="alert alert-success">
+        <div class="messages">
+            {% for message in messages %}
+            {{ message }}
+            {% endfor %}
+        </div>
+    </div>
+    {% endif %}
+    <div class="container">
+        <div class="statement hidden-xs">
+            <p>See what services we can offer you and build your own quotation</p>
+        </div>
+        <div id="search-bar">
+            <div class="display">
+                <form action="{% url 'search' %}" method="get">
+                    <div class="search-input"> <input type="text" name="q" placeholder="Search our services"><span>
+                            <button type="submit">Search</button></span>
+                    </div>
+                </form>
+            </div>
+        </div>
+        {% block content %} {% endblock %}
+    </div>
 
-	<div class="footer">
-		<div class="container">
-			<div class="col row-flex">
-				<div class="col-sm-4">
-					<div class="social-links">
-						<ul class="list-inline social-links ">
-							<li><a target="_blank" href="https://www.facebook.com/blindsidebeer/"
-									class="hvr-pulse"><i class="fa fa-facebook"></i></a></li>
-							<li><a target="_blank" href="https://twitter.com/blindsidebeer"
-									class="hvr-pulse"><i class="fa fa-twitter"></i></a></li>
-							<li><a target="_blank" href="https://www.instagram.com/blindsidebeer/"
-									class="hvr-pulse"><i class="fa fa-instagram"></i></a></li>
-						</ul>
-					</div>
-				</div>
-				<div class="col-sm-4 hidden-xs">
-					<a class="footer-logo" rel="home" href="/" title="Oakland SI">
-						<img class="bottom-logo" src="/media/images/oakland_logo_1.jpg" alt="Oakland SI">
-                        </a>
-				</div>
-				<div class="copyright col-sm-4 hidden-xs">
-					<p> Copyright &copy; 2020 | Oakland Site Investigation Ltd </p>
-				</div>
+    <div class="footer">
+        <div class="container">
+            <div class="col row-flex">
+                <div class="col-sm-4">
+                    <div class="social-links">
+                        <ul class="list-inline social-links ">
+                            <li><a target="_blank" href="https://www.facebook.com/blindsidebeer/" class="hvr-pulse"><i
+                                        class="fa fa-facebook"></i></a></li>
+                            <li><a target="_blank" href="https://twitter.com/blindsidebeer" class="hvr-pulse"><i
+                                        class="fa fa-twitter"></i></a></li>
+                            <li><a target="_blank" href="https://www.instagram.com/blindsidebeer/" class="hvr-pulse"><i
+                                        class="fa fa-instagram"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-4 hidden-xs">
+                    <a class="footer-logo" rel="home" href="/" title="Oakland SI">
+                        <img class="bottom-logo" src="/media/images/oakland_logo_1.jpg" alt="Oakland SI">
+                    </a>
+                </div>
+                <div class="copyright col-sm-4 hidden-xs">
+                    <p> Copyright &copy; 2020 | Oakland Site Investigation Ltd </p>
+                </div>
 
-			</div>
-		</div>
-	</div>
-	</footer>
+            </div>
+        </div>
+    </div>
+    </footer>
 
 </body>
 

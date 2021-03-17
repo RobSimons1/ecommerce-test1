@@ -157,8 +157,38 @@ img.map {
 
 /* Downloads Button Toggle */
 
-#link-box {
+#link-box-rams {
   background: #E2AA72;
+  width: 300px;
+  height: 300px;
+  height: 160px;
+  padding: 5px;
+  display: none;
+  float: right;
+}
+
+#link-box-factsheets {
+  background: #Efffff;
+  width: 300px;
+  height: 300px;
+  height: 160px;
+  padding: 5px;
+  display: none;
+  float: right;
+}
+
+#link-box-spts {
+  background: #E2AA72;
+  width: 300px;
+  height: 300px;
+  height: 160px;
+  padding: 5px;
+  display: none;
+  float: right;
+}
+
+#link-box-insurances {
+  background: #Efffff;
   width: 300px;
   height: 300px;
   height: 160px;
