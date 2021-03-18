@@ -1,5 +1,5 @@
-from django.shortcuts import render, redirect, HttpResponseRedirect, render_to_response
-from django.template import RequestContext
+from django.shortcuts import render, redirect, HttpResponseRedirect, render_to_response # render_to_response added for 400 500 error exception
+from django.template import RequestContext # Line added for 400 500 error exception
 from django.contrib import messages, auth
 from django.core.urlresolvers import reverse
 from .forms import UserLoginForm, UserRegistrationForm, ContactForm
@@ -16,7 +16,15 @@ def index(request):
 
 def downloads(request):
     """A view that displays the downloads page"""
-    return render(request, "downloads.html")         
+    return render(request, "downloads.html")      
+
+def about(request):
+    """A view that displays the about page"""
+    return render(request, "about.html")    
+
+def cases(request):
+    """A view that displays the cases page"""
+    return render(request, "cases.html")         
 
 def contact(request):
     """A view that allows the user to send and
@@ -114,6 +122,7 @@ def register(request):
     args = {'user_form': user_form}
     return render(request, 'register.html', args)
 
+# Line added for 400 500 error exception
 def handler404(request, *args, **argv):
     response = render_to_response('404.html', {},
                                   context_instance=RequestContext(request))
@@ -121,7 +130,7 @@ def handler404(request, *args, **argv):
     return response
 
 
-def handler500(request, *args, **argv):
+def handler500(request, *args, **argv): 
     response = render_to_response('500.html', {},
                                   context_instance=RequestContext(request))
     response.status_code = 500
