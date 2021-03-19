@@ -12,11 +12,7 @@ import sys  # imported to view print outs of Contact Form message in Heroku
 # Create your views here.
 def index(request):
     """A view that displays the index page"""
-    return render(request, "index.html") 
-
-def downloads(request):
-    """A view that displays the downloads page"""
-    return render(request, "downloads.html")                 
+    return render(request, "index.html")              
 
 def contact(request):
     """A view that allows the user to send and
