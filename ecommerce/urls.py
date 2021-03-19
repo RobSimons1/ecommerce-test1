@@ -19,6 +19,7 @@ from accounts import urls as urls_accounts
 from products import urls as urls_products
 from downloads import urls as urls_downloads
 from cases import urls as urls_cases
+from about import urls as urls_about
 from cart import urls as urls_cart
 from search import urls as urls_search
 from checkout import urls as urls_checkout
@@ -35,6 +36,7 @@ urlpatterns = [
     url(r'^products/', include(urls_products)),
     url(r'^downloads/', include(urls_downloads)),
     url(r'^cases/', include(urls_cases)),
+    url(r'^about/', include(urls_about)),
     url(r'^cart/', include(urls_cart)),
     url(r'^checkout/', include(urls_checkout)),
     url(r'^profiles/', include(urls_profile)),  # profiles urls import
