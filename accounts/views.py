@@ -16,15 +16,7 @@ def index(request):
 
 def downloads(request):
     """A view that displays the downloads page"""
-    return render(request, "downloads.html")      
-
-def about(request):
-    """A view that displays the about page"""
-    return render(request, "about.html")    
-
-def cases(request):
-    """A view that displays the cases page"""
-    return render(request, "cases.html")         
+    return render(request, "downloads.html")                 
 
 def contact(request):
     """A view that allows the user to send and
