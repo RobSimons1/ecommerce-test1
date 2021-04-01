@@ -2,31 +2,67 @@
 {% load static %}
 
 {% block content %}
-<div class="container">
-    <div class="col row-flex">
-        <div class="col-sm-12">
-            <img class="cover-pic" src="/media/images/cover_pic.jpg" alt="#">
+<div class="container-fluid">
+    <div class="row-flex">
+        <div class="col-sm-12 col-md-12">
+            <img class="cover-pic" src="/media/images/homepage_pic.jpg" alt="#">
         </div>
     </div>
 </div>
-<div class="container">
+<!--<div class="container">
     <div class="statement">
         <p>Offices</p>
     </div>
     <div class="card col-xs-10 col-xs-offset-1 col-sm-offset-0 col-sm-6 col-md-6">
-        <div><img class="map col-xs-12 col-xs-offset-1 col-sm-offset-0 col-sm-12 col-md-12" src="/media/images/sussex_map.PNG" alt="Sussex">
-        <div class="container"></div>
+        <div><img class="map col-xs-12 col-xs-offset-1 col-sm-offset-0 col-sm-12 col-md-12"
+                src="/media/images/sussex_map.PNG" alt="Sussex">
+            <div class="container"></div>
             <h4><b>Sussex HQ</b></h4>
             <p>Firsland Park Estate, Henfield Road, Albourne, <br> West Sussex, BN6 9JJ </br><br>Tel: 01444 871 464</p>
         </div>
     </div>
     <div class="card col-xs-10 col-xs-offset-1 col-sm-offset-0 col-sm-6 col-md-6">
-        <div><img class="map col-xs-12 col-xs-offset-1 col-sm-offset-0 col-sm-12 col-md-12" src="/media/images/herts_map.PNG" alt="Herts">
-        <div class="container"></div>
+        <div><img class="map col-xs-12 col-xs-offset-1 col-sm-offset-0 col-sm-12 col-md-12"
+                src="/media/images/herts_map.PNG" alt="Herts">
+            <div class="container"></div>
             <h4><b>Hertfordshire</b></h4>
             <p>Berrybushes Farm, Langlebury, Kings Langley, <br> Hertfordshire, WD4 8RL </br><br>Tel: 01442 732 464</p>
         </div>
     </div>
+</div> -->
+<div class="container">
+    <div class="statement">
+        <p>Offices</p>
+    </div>
+    <div class="col row-flex">
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <h1>John Doe</h1>
+                    <p>Architect & Engineer</p>
+                    <p>We love that guy</p>
+                </div>
+                <div class="flip-card-back">
+                    <div><img class="map col-xs-12 col-xs-offset-1 col-sm-offset-0 col-sm-12 col-md-12"
+                            src="/media/images/herts_map.PNG" alt="Herts">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <h1>John Doe</h1>
+                    <p>Architect & Engineer</p>
+                    <p>We love that guy</p>
+                </div>
+                <div class="flip-card-back">
+                    <div><img class="map col-xs-12 col-xs-offset-1 col-sm-offset-0 col-sm-12 col-md-12"
+                            src="/media/images/herts_map.PNG" alt="Herts">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
-
 {% endblock %}
