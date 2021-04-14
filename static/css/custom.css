@@ -146,6 +146,7 @@ img.cover-pic {
     padding-top:80px;
 }
 
+/* Flip Cards */
 .card {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
@@ -162,7 +163,6 @@ img.map {
     margin-top: 20px;
 }
 
-/* Flip Cards */
 /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
 .flip-card {
   display: inline-block;  
@@ -210,8 +210,17 @@ img.map {
   transform: rotateY(180deg);
 }
 
-/* Downloads Button Toggle */
+#office-sussex {
+    display: block;
+    float: left;
+}
 
+#office-herts {
+    display: block;
+    float: right;
+}
+
+/* Downloads Button Toggle */
 /* Button Styling */
 #toggle-rams {
     margin-bottom: 30px;
