@@ -155,6 +155,10 @@ img.cover-pic {
     padding: 15px;
 }
 
+.row.cards {
+    background-color: #FED03D;
+}
+
 /* Add rounded corners to the top left and the top right corner of the image */
 img.map {
     border-radius: 5px 5px 0 0;
