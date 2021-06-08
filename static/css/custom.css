@@ -139,11 +139,19 @@ img.cover-pic {
     max-width: 100%;
 }
 
-.background-image {
+.background-home {
     background-image: url("../images/homepage_pic1.jpg");
     background-size: cover; 
     height:480px; 
     padding-top:80px;
+}
+
+.background-about {
+    background-image: url("../images/About-us-1.jpg");
+    background-size: contain;
+    height:480px; 
+    width: 100%;
+    padding-top: 80px; 
 }
 
 /* Flip Cards */
