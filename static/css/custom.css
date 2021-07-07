@@ -223,12 +223,23 @@ img.map {
 }
 
 #office-sussex {
-    display: block;
+    display: inline;
     float: left;
 }
 
+.about-section {
+    padding-top: 15px;
+    font-size: 20px;
+    font-weight: bolder;
+    font-family: 'Kanit', sans-serif;
+    color: #E2AA72;
+    text-shadow: 1px 1px #4B494A;
+    text-align: center;      
+    letter-spacing: 1px;  
+}
+
 #office-herts {
-    display: block;
+    display: inline;
     float: right;
 }
 
