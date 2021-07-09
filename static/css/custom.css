@@ -297,6 +297,9 @@ img.map {
   float: right;
 }
 
+/* Case Stidies READ MORE button */
+#more {display: none;}
+
 /* ---------------------------------------------------- */
 
 .quantity-field {
