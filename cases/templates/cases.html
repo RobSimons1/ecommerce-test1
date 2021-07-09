@@ -6,26 +6,26 @@
     {% for cases in cases %}
     <div class="panel-body">
         <h2>Thorpe, Surrey</h2>
-        <img class="map col-xs-4 col-xs-offset-0 col-sm-offset-0 col-sm-4 col-md-4" 
-        src="/media/images/sussex_office_pic.jpg" alt="Sussex_office">
+        <!-- <img class="map col-xs-4 col-xs-offset-0 col-sm-offset-0 col-sm-4 col-md-4" 
+        src="/media/images/sussex_office_pic.jpg" alt="Sussex_office"> -->
         <div class="cases" style="background-image: url('{{ MEDIA_URL }}{{ cases.image }}')"></div>
         <h3>{{ cases.name }}</h3>
 			<p class="cases-description">{{ cases.description }}</p>
 			<p>{{ cases.price }}</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi
+        <!--<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi
             lorem egestas vitae scel<span id="dots">...</span><span id="more">erisque enim ligula venenatis dolor.
                 Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut
                 aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis
                 imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue
                 eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</span></p>
 
-        <button onclick="myFunction()" id="myBtn">Read more</button>
+        <button onclick="myFunction()" id="myBtn">Read more</button>-->
     </div>
     {% endfor %}
 </div>
 
 <!-- Script for READ MORE BUTTON -->
-<script>
+<!--<script>
     function myFunction() {
         var dots = document.getElementById("dots");
         var moreText = document.getElementById("more");
@@ -41,5 +41,5 @@
             moreText.style.display = "inline";
         }
     }
-</script>
+</script>-->
 {% endblock %}

@@ -38,8 +38,8 @@
                 </div>
             </div>
         </div>
-        
-    <!-- <div class="about-section"> Commented ou for the being to fix or remove.
+
+        <!-- <div class="about-section"> Commented ou for the being to fix or remove.
 
             <div class="col-sm-4 col-md-3 col-lg-3">
                 <p>About</p>
@@ -96,24 +96,54 @@
 <div class="container-fluid">
     <div class="statement">
         <p>About</p>
+    </div>
+    <div class="about-section">
         <h4>Land Drilling, Civil Engineering and Site Investigation</h4>
-        <h5>Oakland Site Investigation was formed in April 2012 and has established itself as a leading sub-contractor
+        <p>Oakland Site Investigation was formed in April 2012 and has established itself as a leading sub-contractor
             within the Site Investigation
             industry.<br> Our main office is based in West Sussex and we have now opened other successful offices in
-            Hertfordshire and Gloustershire.</br></h5>
-        <h5>The director’s John Essam and Tom Clarke, have over 30 years combined experience carrying out ground
+            Hertfordshire and Gloustershire.</br></p>
+        <p>The director’s John Essam and Tom Clarke, have over 30 years combined experience carrying out ground
             investigations, delivering a wide
-            range of site services to the industry.</h5>
-        <h5>We now run 8 windowless sampling rigs, along with other equipment
-            including Cable Percussion,
-            coring rigs, hand held window sampling, towable 2500 litre bowsers for soakage testing as well as both
-            hydraulic and electric breakers
-            and hand digging equipment, plate bearing and CBR testing.</h5>
+            range of site services to the industry.</p>
+            <span id="dots">...</span><span id="more">
+                <p>We now run 8 windowless sampling rigs, along with other equipment
+                    including Cable Percussion,
+                    coring rigs, hand held window sampling, towable 2500 litre bowsers for soakage testing as well as
+                    both
+                    hydraulic and electric breakers
+                    and hand digging equipment, plate bearing and CBR testing.</p>
 
-        <h5>We are an accredited member of CHAS, all lead drillers hold NVQ Lead Driller cards in Land Drilling, we have
-            both superviser and operatives in Streetworks and all of our workers hold CSCS cards.</h5>
-        <h5>This is important to
-            us for keeping high standards both in our work and our approach to work.</h5>
+                <p>We are an accredited member of CHAS, all lead drillers hold NVQ Lead Driller cards in Land Drilling,
+                    we
+                    have
+                    both superviser and operatives in Streetworks and all of our workers hold CSCS cards.</p>
+                <p>This is important to
+                    us for keeping high standards both in our work and our approach to work.
+                </p>
+            </span>
+
+            <button onclick="myFunction()" id="myBtn">Read more</button>
     </div>
 </div>
+
+<!--Script for READ MORE BUTTON -->
+<script>
+    function myFunction() {
+        var dots = document.getElementById("dots");
+        var moreText = document.getElementById("more");
+        var btnText = document.getElementById("myBtn");
+
+        if (dots.style.display === "none") {
+            dots.style.display = "inline";
+            btnText.innerHTML = "Read more";
+            moreText.style.display = "none";
+        } else {
+            dots.style.display = "none";
+            btnText.innerHTML = "Read less";
+            moreText.style.display = "inline";
+        }
+    }
+</script>
+
 {% endblock %}
