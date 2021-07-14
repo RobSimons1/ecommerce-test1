@@ -11,18 +11,28 @@
 			<p class="product-description">{{ product.description }}</p>
 			<p>{{ product.price }}</p>
 
+			<form method="post" action="{% url 'get_review_list' product.id %}">
+				{% csrf_token %}
+				<span>
+					<button type="submit">Reviews</button>
+				</span>
+
+			</form>
+
 			<form method="post" action="{% url 'add_to_cart' product.id %}">
 				{% csrf_token %}
 				<div class="input-group">
-					<input name="quantity" type="number" min="1" max="999" class="form-control" placeholder="Quantity" required>
+					<input name="quantity" type="number" min="1" max="999" class="form-control" placeholder="Quantity"
+						required>
 					<span class="input-group-btn">
-                            <button class="btn btn-success" type="submit">Add</button>
-                        </span>
+						<button class="btn btn-success" type="submit">Add</button>
+					</span>
 				</div>
 			</form>
 		</div>
 	</div>
-	{% empty %} <!-- Added to return message if no products match search query -->
+	{% empty %}
+	<!-- Added to return message if no products match search query -->
 	<h3>Sorry, none of our services match your search</h3>
 	{% endfor %}
 </div>

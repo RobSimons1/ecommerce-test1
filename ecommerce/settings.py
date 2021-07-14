@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     'profiles',
     'cart',
     'checkout',
+    'user_ratings',  # user-ratings app installation
     'storages',
 ]
 

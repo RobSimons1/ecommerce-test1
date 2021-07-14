@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container">
+	<div class="col row-flex">
+
+		<h2>Reviews for {{ product }} </h2>
+		
+		<div class="row product" style="background-image: url('{{ MEDIA_URL }}{{ product.image }}')"></div>
+		<span><h3>{{ product.name }}</h3>
+                <p class= "brewery-name">Blindside Brewing</p>
+                <p class="product-description">{{ product.description }}</p></span>
+        <a href="{% url 'create_an_item' product.id %}">Add a Review</a> <!-- Add link to create an item  -->
+		<table>
+
+			{% for item in items %}
+			<ul>
+
+
+				<div class="caption">
+					<h4>{{ item.product.name }}</h4>
+					<li class="reviewitem"><b>Name:</b> {{ item.name }}</li>
+					<li class="reviewitem"><b>Review:</b> {{ item.review }}</li>
+					<li class="reviewitem"><b>Rating out of 5:</b> {{ item.rating }}</li>
+					<li class="reviewitem"><b>Date:</b>{{ item.date }}</li>
+					<br>
+                </div>
+			</ul>
+
+			{% endfor %}
+		</table>
+		<a href="{% url 'create_an_item' product.id %}">Add a Review</a> <!-- Add link to create an item  -->
+
+	</div>
+</div>
+
+{% endblock %}

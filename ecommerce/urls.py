@@ -24,6 +24,8 @@ from cart import urls as urls_cart
 from search import urls as urls_search
 from checkout import urls as urls_checkout
 from profiles import urls as urls_profile  # Profiles urls import
+from user_ratings import urls as urls_user_ratings  # user_ratings urls import
+from user_ratings.views import get_review_list  # user_reviews list view import
 from products.views import products
 from django.views import static
 from .settings import MEDIA_ROOT
@@ -40,6 +42,8 @@ urlpatterns = [
     url(r'^cart/', include(urls_cart)),
     url(r'^checkout/', include(urls_checkout)),
     url(r'^profiles/', include(urls_profile)),  # profiles urls import
+    url(r'^user_ratings/', include(
+        urls_user_ratings)),  # user_ratings urls import
     url(r'^search/', include(urls_search)),
     url(r'^media/(?P<path>.*)$', static.serve, {'document_root': MEDIA_ROOT})
 ]
